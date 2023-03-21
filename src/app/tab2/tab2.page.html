@@ -15,7 +15,12 @@
     <ion-icon class="scale-[2.5] " name="search-outline"></ion-icon>
   </div>
 </div>
-
+<ul>
+  <li *ngFor="let student of students">
+    <span>{{student.name}}</span>
+    <span>{{student.age}}</span>
+  </li>
+</ul>
   <!-- <ul>
     <li>
       <img src="" alt="">

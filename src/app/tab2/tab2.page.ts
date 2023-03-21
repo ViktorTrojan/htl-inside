@@ -6,7 +6,164 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
+  students = [
+    {
+      name: "Florian Hedrich",
+      age: 19,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    },
+    {
+      name: "Viktor Trojan",
+      age: -3,
+    }
+  ]
   constructor() {}
-
+  
 }
