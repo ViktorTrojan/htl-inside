@@ -102,68 +102,8 @@ export class Tab2Page {
     {
       name: "Viktor Trojan",
       age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
-    },
-    {
-      name: "Viktor Trojan",
-      age: -3,
     }
-  ]
+    ]
   constructor() {}
   
 }

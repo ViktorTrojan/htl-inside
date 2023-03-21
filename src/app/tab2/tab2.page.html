@@ -17,26 +17,10 @@
 </div>
 <ul>
   <li *ngFor="let student of students">
-    <span>{{student.name}}</span>
-    <span>{{student.age}}</span>
+    <div class="bg-slate-800 gap-10 mb-5">
+      <span>{{student.name}}</span><br>
+      <span>Alter: {{student.age}}</span>
+    </div>
   </li>
 </ul>
-  <!-- <ul>
-    <li>
-      <img src="" alt="">
-      <h1>Luca Ramlack</h1>
-      <p>Alter: -3</p>
-    </li>
-    <li>
-      <img src="" alt="">
-      <h1>Luca Ramlack</h1>
-      <p>Alter: -3</p>
-    </li>
-    <li>
-      <img src="" alt="">
-      <h1>Luca Ramlack</h1>
-      <p>Alter: -3</p>
-    </li>
-  </ul> -->
-
 </ion-content>
