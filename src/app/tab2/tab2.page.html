@@ -1,17 +1,37 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+
+<div class="flex m-10 gap-10">
+  <button class="p-5 rounded-xl" style="background-color: var(--btn-1); color: var(--btn-text);"><img src="">Zufälliger Schüler</button>
+  <button class="p-5 rounded-xl" style="background-color: var(--btn-2); color: var(--btn-text);">Überblick</button>
+</div>
+
+<div class="flex m-3">
+  <input class="w-[80%] bg-none" type="text" name="search" id="search">
+  <div class=" flex items-center w-20 justify-center">
+    <ion-icon class="scale-[2.5] " name="search-outline"></ion-icon>
+  </div>
+</div>
+
+  <!-- <ul>
+    <li>
+      <img src="" alt="">
+      <h1>Luca Ramlack</h1>
+      <p>Alter: -3</p>
+    </li>
+    <li>
+      <img src="" alt="">
+      <h1>Luca Ramlack</h1>
+      <p>Alter: -3</p>
+    </li>
+    <li>
+      <img src="" alt="">
+      <h1>Luca Ramlack</h1>
+      <p>Alter: -3</p>
+    </li>
+  </ul> -->
+
 </ion-content>
