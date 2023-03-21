@@ -3,6 +3,28 @@
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.googleapis.com/css?family=Poppins') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.googleapis.com/css?family=Montserrat') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-poppins: 'Poppins', sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
+
+html {
+  font-family: $font-poppins;
+}
+
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
