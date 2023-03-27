@@ -110,9 +110,17 @@ html {
    */
 
   body {
-    --btn-1: rgb(238, 203, 255);
-    --btn-2: rgb(210, 238, 196);
+    --btn-1: #EECBFF;
+    --btn-1-1: #BA72C0;
+    --btn-2: #D2EEC4;
+    --btn-2-1: #5A9459;
     --btn-text: black;
+    --panel0: #0F0F15;
+    --panel1: #333237;
+    --txt1: #FFFFFF;
+    --txt2: #dddddd;
+    --txt3: #CCCCCC;
+    --txtCol1: #2fb96d;
 
     --ion-color-primary: rgb(134, 114, 216);
     --ion-color-primary-shadow: '0 0 10px 5px rgba(134, 114, 216, 1)';
@@ -185,7 +193,7 @@ html {
    */
 
   .ios body {
-    --ion-background-color: #000000;
+    --ion-background-color: #1D1C21;
     --ion-background-color-rgb: 0,0,0;
 
     --ion-text-color: #ffffff;
@@ -229,7 +237,7 @@ html {
    */
 
   .md body {
-    --ion-background-color: #121212;
+    --ion-background-color: #1D1C21;
     --ion-background-color-rgb: 18,18,18;
 
     --ion-text-color: #ffffff;

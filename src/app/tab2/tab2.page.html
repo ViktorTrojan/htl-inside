@@ -3,28 +3,68 @@
 
 <ion-content [fullscreen]="true">
 
+  <!-- Space From Top, becuase of Statusbar. TODO: calculate Statusbar height -->
+  <div class="mt-10"></div>
 
-  <div class="flex m-10 gap-10">
-    <button class="p-5 rounded-xl" style="background-color: var(--btn-1); color: var(--btn-text);"><img
-        src="">Zufälliger Schüler</button>
-    <button class="p-5 rounded-xl" style="background-color: var(--btn-2); color: var(--btn-text);">Überblick</button>
-  </div>
+  <!-- Container -->
+  <div class="flex flex-col px-2 sm:px-4 gap-2">
 
-  <div class="flex m-3">
-    <input class="w-[80%] bg-none" type="text" name="search" id="search">
-    <div class=" flex items-center w-20 justify-center">
-      <ion-icon class="scale-[2.5] " name="search-outline"></ion-icon>
+    <!-- Settings Bar Container -->
+    <div class="flex w-full justify-end mb-4">
+      <button class="p-1 rounded-md" style="background-color: var(--panel0);">
+        <app-svg-settings style="color: var(--txt1);"></app-svg-settings>
+      </button>
+
     </div>
+
+    <div class="flex justify-evenly gap-4">
+
+      <!-- Zufälliger Schüler -->
+      <button class="ion-activatable flex flex-col items-center rounded-xl max-w-[120px] w-full p-4 gap-2 relative overflow-hidden"
+        style="background-color: var(--btn-1); color: var(--btn-text);">
+
+        <ion-ripple-effect></ion-ripple-effect>
+        <app-svg-question style="color: var(--btn-1-1);"></app-svg-question>
+        <span>Zufälliger Schüler</span>
+      </button>
+
+      <!-- Überblick -->
+      <button class="ion-activatable flex flex-col items-center rounded-xl max-w-[120px] w-full p-4 gap-2 relative overflow-hidden"
+        style="background-color: var(--btn-2); color: var(--btn-text);">
+
+        <ion-ripple-effect></ion-ripple-effect>
+        <app-svg-info style="color: var(--btn-2-1);"></app-svg-info>
+        <span>Überblick</span>
+      </button>
+
+    </div>
+
+    <!-- Search Container -->
+    <div class="flex gap-1 mt-4">
+      <!-- Input TODO: user ionic search -->
+      <input class="w-full border-none rounded" style="background-color: var(--panel0);" type="text" name="search"
+        id="search" placeholder="Search...">
+      <!-- Search Icon -->
+      <button class="p-1 rounded-md" style="background-color: var(--panel0);">
+        <ion-icon class="text-4xl" style="color: var(--txt1);" name="search-outline"></ion-icon>
+      </button>
+    </div>
+
+    <!-- Students -->
+    <ul>
+      <li *ngFor="let student of students">
+        <button class="ion-activatable flex items-center gap-2 mb-2 p-2 rounded-md w-full relative overflow-hidden" style="background-color: var(--panel1); color: var(--btn-1);">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img src="assets/Download.png" class="w-12 h-12 object-contain rounded-3xl">
+
+          <!-- Name and Age -->
+          <div class="flex flex-col items-start">
+            <span class="text-xl" style="color: var(--txt1);">{{ student.vname + ' ' + student.nname }}</span>
+            <span style="color: var(--txt3);">Alter: {{student.age}}</span>
+          </div>
+        </button>
+      </li>
+    </ul>
+
   </div>
-  <ul>
-    <li *ngFor="let student of students">
-      <div class="bg-slate-800 gap-10 mb-5 rounded-md flex">
-        <img src="assets/Download.png" class="w-12 rounded-3xl ml-2">
-        <div class="">
-          <span>{{student.name}}</span><br>
-          <span>Alter: {{student.age}}</span>
-        </div>
-      </div>
-    </li>
-  </ul>
 </ion-content>
