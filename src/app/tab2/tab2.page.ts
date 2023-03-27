@@ -117,7 +117,7 @@ export class Tab2Page implements OnInit {
     try{
       const response = await axios.get("http://lueger.cloud:3000/getAllSchueler");
       console.log(response.data)
-      return response.data;/
+      return response.data;
     }catch (error){
       console.error(error)
     }
