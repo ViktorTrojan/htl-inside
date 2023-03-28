@@ -11,7 +11,10 @@
 
     <!-- Settings Bar Container -->
     <div class="flex w-full justify-between items-center mb-4">
-      <app-svg-arrowleft (click)="goToTab2()" style="color: var(--txt1);"></app-svg-arrowleft>
+      <button class="ion-activatable relative overflow-hidden rounded-full">
+        <ion-ripple-effect></ion-ripple-effect>
+        <app-svg-arrowleft (click)="goToTab2()" style="color: var(--txt1);"></app-svg-arrowleft>
+      </button>
 
       <h1>Überblick</h1>
 
@@ -19,26 +22,63 @@
         <app-svg-settings style="color: var(--txt1);"></app-svg-settings>
       </button>
     </div>
+  </div>
 
-    <div class="flex justify-center items-center h-[300px]">
-      <div class="relative">
+  <div class="flex justify-center h-[350px] overflow-hidden">
+    <div class="relative flex items-center justify-center">
 
-        <div class="absolute w-[140px] h-[140px]">
-          <!-- TODO: Make Polygon Image -->
-          <!-- <img class="w-[140px] h-[140px] rounded-full" src="https://hies.lueger.cloud/avatar_schi.jpg"> -->
-          <img class="w-[140px] h-[140px] rounded-full" src="assets/Download.png">
+      <div class="absolute w-[140px] h-[140px]">
+        <!-- TODO: Make Polygon Image -->
+        <!-- <img class="w-[140px] h-[140px] rounded-full" src="https://hies.lueger.cloud/avatar_schi.jpg"> -->
+        <img class="w-[140px] h-[140px] rounded-full" src="assets/Download.png">
+      </div>
+      <app-svg-polygonoutline class="absolute scale-[90%] rotate-[20deg]"
+        style="color: var(--poly1);"></app-svg-polygonoutline>
+      <app-svg-polygonoutline class="absolute scale-[130%] rotate-[40deg]"
+        style="color: var(--poly2);"></app-svg-polygonoutline>
+      <app-svg-polygonoutline class="absolute scale-[110%] rotate-[30deg]"
+        style="color: var(--poly3);"></app-svg-polygonoutline>
+      <app-svg-polygonoutline class="absolute scale-[150%] rotate-[50deg]"
+        style="color: var(--poly4);"></app-svg-polygonoutline>
+    </div>
+
+    <!-- Show Labels, (Klassenvorstand) -->
+    <div class="relative flex items-center top-20">
+      <div class="absolute">
+        <div class="flex flex-col gap-2">
+          <div style="background-color: var(--panel0);" class="w-max rounded-full px-2 py-1">
+            <p class="text-xs">Klassenvorstand</p>
+          </div>
+          <div style="background-color: var(--panel1);" class="w-max rounded-full px-2 py-1">
+            <p>Veronika Schippani</p>
+          </div>
         </div>
-        <app-svg-polygonoutline class="absolute" style="color: var(--txt1);"></app-svg-polygonoutline>
-        <app-svg-polygonoutline class="absolute scale-[150%] rotate-[10deg]"
-          style="color: var(--txt1);"></app-svg-polygonoutline>
-        <app-svg-polygonoutline class="absolute scale-[200%] rotate-[20deg]"
-          style="color: var(--txt1);"></app-svg-polygonoutline>
-        <app-svg-polygonoutline class="absolute scale-[250%] rotate-[30deg]"
-          style="color: var(--txt1);"></app-svg-polygonoutline>
+      </div>
+    </div>
+  </div>
 
+  <!-- Container -->
+  <div class="mt-4 flex flex-col px-2 sm:px-4 gap-2">
+
+    <!-- TODO: make this into a component -->
+    <div class="flex flex-col rounded-xl p-2 pb-4 gap-2" style="background-color: var(--panel1);">
+
+      <!-- Icon and Label -->
+      <div class="flex items-center gap-2">
+        <div class="w-14 h-14 rounded-full bg-red-500"></div>
+        <p class="text-lg">4AHITN(N303)/23 Schüler</p>
+      </div>
+
+      <div class="flex justify-between">
+        <p class="text-xl">19 Jungs</p>
+        <p class="text-xl">4 Mädchen</p>
+      </div>
+
+      <div class="flex gap-1">
+        <div class="w-[70%] h-2 rounded-full bg-blue-500"></div>
+        <div class="w-[30%] h-2 rounded-full bg-red-500"></div>
       </div>
 
     </div>
-
   </div>
 </ion-content>
