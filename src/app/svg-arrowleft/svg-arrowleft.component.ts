@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './svg-arrowleft.component.html',
   styleUrls: ['./svg-arrowleft.component.scss'],
 })
-export class SvgArrowleftComponent  implements OnInit {
+export class SvgArrowleftComponent implements OnInit {
 
   constructor() { }
 

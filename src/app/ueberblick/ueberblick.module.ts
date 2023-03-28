@@ -7,8 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { UeberblickPageRoutingModule } from './ueberblick-routing.module';
 
 import { UeberblickPage } from './ueberblick.page';
-import { SvgArrowleftComponent } from '../svg-arrowleft/svg-arrowleft.component';
 import { SvgSettingsModule } from '../svg-settings/svg-settings.module';
+import { SvgArrowleftModule } from '../svg-arrowleft/svg-arrowleft.module';
 
 @NgModule({
   imports: [
@@ -16,8 +16,9 @@ import { SvgSettingsModule } from '../svg-settings/svg-settings.module';
     FormsModule,
     IonicModule,
     UeberblickPageRoutingModule,
-    SvgSettingsModule
+    SvgSettingsModule,
+    SvgArrowleftModule
   ],
-  declarations: [UeberblickPage, SvgArrowleftComponent]
+  declarations: [UeberblickPage]
 })
 export class UeberblickPageModule {}

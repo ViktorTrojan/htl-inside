@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController, IonTabs } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor(private navCtrl: NavController, private tabs: IonTabs) {}
 
+
+  goToTab2(){
+    this.tabs.select("tab2")
+  }
 }

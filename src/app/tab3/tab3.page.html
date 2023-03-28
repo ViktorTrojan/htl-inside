@@ -2,6 +2,36 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  
+ 
+  <!-- Space From Top, becuase of Statusbar. TODO: calculate Statusbar height -->
+  <div class="mt-10"></div>
 
+  <!-- Container -->
+  <div class="flex flex-col px-2 sm:px-4 gap-2">
+
+    <!-- Settings Bar Container -->
+    <div class="flex w-full justify-between items-center mb-4">
+      <app-svg-arrowleft (click)="goToTab2()" style="color: var(--txt1);"></app-svg-arrowleft>
+
+      <h1>Schüler</h1>
+
+      <button class="p-1 rounded-md" style="background-color: var(--panel0);">
+        <app-svg-settings style="color: var(--txt1);"></app-svg-settings>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="ml-2.5w-[95%] rounded-2xl" style="background-color: var(--panel1);">
+    <div class="flex justify-center">
+      <img src="assets/Download.png" class="w-15 h-15 object-contain rounded-full">
+    </div>
+    <div class="flex-col text-center">
+      <p>Luka Ramlack</p>
+      <p>Autist</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid expedita repellat quos reprehenderit dolor incidunt, eveniet temporibus est vel dignissimos? Nostrum soluta laborum ducimus! Assumenda, accusantium possimus maxime, illo dolor obcaecati non, expedita in sunt ullam sint nostrum quibusdam iure?</p>
+  </div>
 
 </ion-content>
