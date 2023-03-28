@@ -40,5 +40,9 @@ export class Tab2Page implements OnInit {
   goToTab3() {
     this.tabs.select("tab3");
   }
+
+  goToUeberblick() {
+    this.tabs.select("ueberblick");
+  }
 }
 
