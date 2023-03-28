@@ -7,6 +7,8 @@ interface Student {
   age: number;
 }
 
+
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -25,7 +27,7 @@ export class Tab2Page implements OnInit {
   
   async getAllSchueler(){
     try{
-      const response = await axios.get("https://hies.lueger.cloud/getAllSchueler");
+      const response = await axios.get("https://hies.lueger.cloud/getMainPage");
       console.log(response.data)
       return response.data;
     }catch (error){
