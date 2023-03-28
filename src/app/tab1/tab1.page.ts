@@ -9,10 +9,6 @@ import { NavController, IonTabs } from '@ionic/angular';
 })
 export class Tab1Page {
 
-  // constructor(private router: Router) {
-  //   this.goToTab2();
-  // }
-
   constructor(private navCtrl: NavController, private tabs: IonTabs) {
   }
 

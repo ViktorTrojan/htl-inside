@@ -9,6 +9,7 @@ import { UeberblickPageRoutingModule } from './ueberblick-routing.module';
 import { UeberblickPage } from './ueberblick.page';
 import { SvgSettingsModule } from '../svg-settings/svg-settings.module';
 import { SvgArrowleftModule } from '../svg-arrowleft/svg-arrowleft.module';
+import { SvgPolygonOutlineModule } from '../svg-polygonoutline/svg-polygonoutline.module';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { SvgArrowleftModule } from '../svg-arrowleft/svg-arrowleft.module';
     IonicModule,
     UeberblickPageRoutingModule,
     SvgSettingsModule,
-    SvgArrowleftModule
+    SvgArrowleftModule,
+    SvgPolygonOutlineModule
   ],
   declarations: [UeberblickPage]
 })
