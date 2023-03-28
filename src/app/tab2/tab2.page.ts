@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import axios, { AxiosRequestConfig } from "axios";
+import { NavController, IonTabs } from '@ionic/angular';
 
 interface Student {
   vname: string;
@@ -23,7 +24,7 @@ export class Tab2Page implements OnInit {
     });
   }
 
-  constructor() {}
+  constructor(private navCtrl: NavController, private tabs: IonTabs) {}
   
   async getAllSchueler(){
     try{
@@ -34,6 +35,10 @@ export class Tab2Page implements OnInit {
       console.error(error)
     }
     
+  }
+
+  goToTab3() {
+    this.tabs.select("tab3");
   }
 }
 
