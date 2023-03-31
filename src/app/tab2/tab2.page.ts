@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import axios, { AxiosRequestConfig } from "axios";
 import { NavController, IonTabs } from '@ionic/angular';
-import { getAllSchueler, getSchueler } from 'src/axios-instance';
 
 interface Student {
   vname: string;
   nname: string;
   age: number;
 }
-
-
 
 @Component({
   selector: 'app-tab2',
@@ -23,22 +20,9 @@ export class Tab2Page implements OnInit {
     this.getAllSchueler().then((data: Student[]) => {
       this.students = data;
     });
-    
   }
 
-  constructor(private navCtrl: NavController, private tabs: IonTabs) {
-
-  }
-  async fetchAllSchueler() {
-    const users = await getAllSchueler();
-    console.log(users);
-    
-  }
-
-  async fetchSchueler(id: number) {
-    const user = await getSchueler(id);
-    console.log(user);
-  }
+  constructor(private navCtrl: NavController, private tabs: IonTabs) {}
 
   async getAllSchueler(){
     try{
