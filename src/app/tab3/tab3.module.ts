@@ -8,7 +8,6 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab3PageRoutingModule } from './tab3-routing.module';
 import { SvgSettingsModule } from '../svg-settings/svg-settings.module';
 import { SvgArrowleftModule } from '../svg-arrowleft/svg-arrowleft.module';
-
 @NgModule({
   imports: [
     IonicModule,
@@ -17,7 +16,7 @@ import { SvgArrowleftModule } from '../svg-arrowleft/svg-arrowleft.module';
     ExploreContainerComponentModule,
     Tab3PageRoutingModule,
     SvgSettingsModule,
-    SvgArrowleftModule
+    SvgArrowleftModule,
   ],
   declarations: [Tab3Page]
 })
