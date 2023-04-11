@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import axios, { AxiosRequestConfig } from "axios";
 import { NavController, IonTabs } from '@ionic/angular';
+import API from '../api-instance';
 
 interface Student {
   vname: string;
@@ -25,13 +26,7 @@ export class Tab2Page implements OnInit {
   constructor(private navCtrl: NavController, private tabs: IonTabs) {}
 
   async getAllSchueler(){
-    try{
-      const response = await axios.get("https://api.susnext.com/getMainPage");
-      console.log(response.data)
-      return response.data;
-    }catch (error){
-      console.error(error)
-    }
+    return API.getAllSchuelers();
   }
 
   goToTab3() {
