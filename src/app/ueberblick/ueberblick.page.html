@@ -65,7 +65,10 @@
 
       <!-- Icon and Label -->
       <div class="flex items-center gap-2">
-        <div class="w-14 h-14 rounded-full bg-red-500"></div>
+        <!-- TODO: do a component for this colored svg circle -->
+        <div class="flex justify-center items-center w-14 h-14 rounded-full bg-[#cccccc]">
+          <app-svg-class class="" style="color: var(--poly4);"></app-svg-class>
+        </div>
         <p class="text-lg">4AHITN(N303)/23 Schüler</p>
       </div>
 
@@ -80,5 +83,92 @@
       </div>
 
     </div>
+
+    <!-- TODO: make this into a component -->
+    <div class="flex flex-col rounded-xl p-2 pb-4 gap-2" style="background-color: var(--panel1);">
+
+      <!-- Wrapper for ( Icon + Name ) ( and the panel on the right ) -->
+      <div class="flex justify-between items-center">
+        <!-- Icon and Label -->
+        <div class="flex items-center gap-2">
+          <!-- TODO: do a component for this colored svg circle -->
+          <div class="flex justify-center items-center w-14 h-14 rounded-full bg-[#FFE898]">
+            <app-svg-study class="" style="color: var(--poly4);"></app-svg-study>
+          </div>
+          <p class="text-lg">Schulfächer</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>35Stunden /W</p>
+        </div>
+      </div>
+
+      <div class="flex gap-2 flex-wrap">
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>ITP2 6x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>D 2x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>SEW 3x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>NWT1 8x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>INSY 3x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>BSPK 2x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>WIR_2 1x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>AM 2x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>E1 2x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>GGP 2x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>NW2 2x</p>
+        </div>
+
+        <!-- TODO: Make this into a component -->
+        <div style="background-color: var(--panel2);" class="rounded px-2 py-1">
+          <p>WIR_3 2x</p>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 </ion-content>

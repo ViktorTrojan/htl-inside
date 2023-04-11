@@ -10,6 +10,8 @@ import { UeberblickPage } from './ueberblick.page';
 import { SvgSettingsModule } from '../svg-settings/svg-settings.module';
 import { SvgArrowleftModule } from '../svg-arrowleft/svg-arrowleft.module';
 import { SvgPolygonOutlineModule } from '../svg-polygonoutline/svg-polygonoutline.module';
+import { SvgClassModule } from '../svg-class/svg-class.module';
+import { SvgStudyModule } from '../svg-study/svg-study.module';
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { SvgPolygonOutlineModule } from '../svg-polygonoutline/svg-polygonoutlin
     UeberblickPageRoutingModule,
     SvgSettingsModule,
     SvgArrowleftModule,
-    SvgPolygonOutlineModule
+    SvgPolygonOutlineModule,
+    SvgClassModule,
+    SvgStudyModule,
   ],
   declarations: [UeberblickPage]
 })
