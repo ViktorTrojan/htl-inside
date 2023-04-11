@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, IonTabs } from '@ionic/angular';
+ 
 
 @Component({
   selector: 'app-tab3',
