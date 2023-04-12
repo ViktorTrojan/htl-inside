@@ -6,6 +6,7 @@ import { Tab3Page } from './tab3.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab3PageRoutingModule } from './tab3-routing.module';
+
 import { SvgSettingsModule } from '../svg-settings/svg-settings.module';
 import { SvgArrowleftModule } from '../svg-arrowleft/svg-arrowleft.module';
 import { SvgGenderFemaleModule } from '../svg-gender-female/svg-gender-female.module';
@@ -17,10 +18,13 @@ import { SvgSocialMediaModule } from '../svg-social-media/svg-social-media.modul
 import { SvgSmokerModule } from '../svg-smoker/svg-smoker.module';
 import { SvgAlkModule } from '../svg-alk/svg-alk.module';
 import { SvgCodeLangModule } from '../svg-code-lang/svg-code-lang.module';
-import { SvgLangComponent } from '../svg-lang/svg-lang.component';
 import { SvgLangModule } from '../svg-lang/svg-lang.module';
 import { SvgHobbyModule } from '../svg-hobby/svg-hobby.module';
 import { SvgSpecialModule } from '../svg-special/svg-special.module';
+import { SvgOsModule } from '../svg-os/svg-os.module';
+import { SvgBooksModule } from '../svg-books/svg-books.module';
+import { SvgBrainModule } from '../svg-brain/svg-brain.module';
+
 @NgModule({
   imports: [
     IonicModule,
@@ -42,7 +46,9 @@ import { SvgSpecialModule } from '../svg-special/svg-special.module';
     SvgLangModule,
     SvgHobbyModule,
     SvgSpecialModule,
-    
+    SvgBooksModule,
+    SvgOsModule,
+    SvgBrainModule
   ],
   declarations: [Tab3Page]
 })
