@@ -13,13 +13,13 @@
     <div class="flex w-full justify-between items-center mb-4">
       <button class="ion-activatable relative overflow-hidden rounded-full">
         <ion-ripple-effect></ion-ripple-effect>
-        <app-svg-arrowleft (click)="goToTab2()" style="color: var(--txt1);"></app-svg-arrowleft>
+        <app-svg-arrowleft (click)="goToLandingPage()" style="color: var(--txt1);"></app-svg-arrowleft>
       </button>
 
-      <h1>Überblick</h1>
+      <p class="text-center text-3xl">Überblick</p>
 
       <button class="p-1 rounded-md" style="background-color: var(--panel0);">
-        <app-svg-settings style="color: var(--txt1);"></app-svg-settings>
+        <app-svg-settings (click)="goToSettings()" style="color: var(--txt1);"></app-svg-settings>
       </button>
     </div>
   </div>
@@ -58,7 +58,7 @@
   </div>
 
   <!-- Container -->
-  <div class="mt-4 flex flex-col px-2 sm:px-4 gap-2">
+  <div class="mt-4 flex flex-col px-2 sm:px-4 pb-2 sm:pb-4 gap-2">
 
     <!-- TODO: make this into a component -->
     <div class="flex flex-col rounded-xl p-2 pb-4 gap-2" style="background-color: var(--panel1);">

@@ -13,8 +13,12 @@ export class UeberblickPage implements OnInit {
   ngOnInit() {
   }
 
-  goToTab2() {
+  goToLandingPage() {
     this.tabs.select("tab2");
+  }
+
+  goToSettings() {
+    this.tabs.select("settings");
   }
 
 }

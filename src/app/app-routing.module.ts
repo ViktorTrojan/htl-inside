@@ -9,7 +9,11 @@ const routes: Routes = [
   {
     path: 'ueberblick',
     loadChildren: () => import('./ueberblick/ueberblick.module').then( m => m.UeberblickPageModule)
+  },  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   }
+
 ];
 @NgModule({
   imports: [

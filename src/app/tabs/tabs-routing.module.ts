@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('../ueberblick/ueberblick.module').then(m => m.UeberblickPageModule)
       },
       {
+        path: 'settings',
+        loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
