@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import axios, { AxiosRequestConfig } from "axios";
 import { NavController, IonTabs } from '@ionic/angular';
 import API from '../api-instance';
+import { Router } from '@angular/router';
 
 interface Student {
   vname: string;
@@ -23,10 +24,14 @@ export class Tab2Page implements OnInit {
     });
   }
 
-  constructor(private navCtrl: NavController, private tabs: IonTabs) {}
+  constructor(private navCtrl: NavController, private tabs: IonTabs, private router: Router) {}
 
   async getAllSchueler(){
     return API.getAllSchuelers();
+  }
+
+  Test(){
+    this.router.navigate(["/tab3", { id: "123"}])
   }
 
   goToTab3() {
