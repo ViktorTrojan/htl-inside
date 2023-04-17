@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { Tab3Page } from './tab3/tab3.page';
+import { TabsPage } from './tabs/tabs.page';
 
 const routes: Routes = [
   {
@@ -9,7 +11,8 @@ const routes: Routes = [
   {
     path: 'ueberblick',
     loadChildren: () => import('./ueberblick/ueberblick.module').then( m => m.UeberblickPageModule)
-  },  {
+  },
+  {
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
   }

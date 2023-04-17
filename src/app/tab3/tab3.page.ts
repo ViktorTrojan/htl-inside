@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NavController, IonTabs } from '@ionic/angular';
  
 
@@ -9,15 +9,15 @@ import { NavController, IonTabs } from '@ionic/angular';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page implements OnInit{
+ 
+  id: any;
+  constructor(private navCtrl: NavController, private tabs: IonTabs, private storage: Storage) {}
 
-  constructor(private navCtrl: NavController, private tabs: IonTabs, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-      this.activatedRoute.params.subscribe(params => {
-        const test = params["myParam"]
-        console.log(params)
-      })
+    console.log(this.storage.getItem("id"))
   }
+  
 
   goToTab2(){
     this.tabs.select("tab2")
