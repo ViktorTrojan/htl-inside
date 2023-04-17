@@ -22,19 +22,12 @@ export class Tab2Page implements OnInit {
     this.getAllSchueler().then((data: Student[]) => {
       this.students = data;
     });
-  }
+  }  
 
-  
-
-  constructor(private navCtrl: NavController, private tabs: IonTabs, private storage: Storage) {}
+  constructor(private navCtrl: NavController, private tabs: IonTabs) {}
 
   async getAllSchueler(){
     return API.getAllSchuelers();
-  }
-
-  test(){
-    this.storage.setItem("id", "123");
-    this.tabs.select("tab3");
   }
 
   goToTab3() {

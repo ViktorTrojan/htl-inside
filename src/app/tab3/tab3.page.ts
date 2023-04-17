@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { NavController, IonTabs } from '@ionic/angular';
  
 
@@ -8,16 +7,9 @@ import { NavController, IonTabs } from '@ionic/angular';
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
-export class Tab3Page implements OnInit{
+export class Tab3Page{
  
-  id: any;
-  constructor(private navCtrl: NavController, private tabs: IonTabs, private storage: Storage) {}
-
-
-  ngOnInit() {
-    console.log(this.storage.getItem("id"))
-  }
-  
+  constructor(private navCtrl: NavController, private tabs: IonTabs) {}
 
   goToTab2(){
     this.tabs.select("tab2")
