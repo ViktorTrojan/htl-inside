@@ -10,6 +10,7 @@ interface Student {
   vname: string;
   nname: string;
   age: number;
+  foto: string;
 }
 
 @Component({
