@@ -54,14 +54,14 @@
     <ul>
       <li *ngFor="let student of students">
         <button class="ion-activatable flex items-center gap-2 mb-2 p-2 rounded-md w-full relative overflow-hidden" style="background-color: var(--panel1); color: var(--btn-1);" 
-        (click)="goToUser(123)">
+        (click)="goToUser(student.id)">
           <ion-ripple-effect></ion-ripple-effect>
           <img src="assets/Download.png" class="w-12 h-12 object-contain rounded-3xl">
 
           <!-- Name and Age -->
           <div class="flex flex-col items-start">
             <span class="text-xl" style="color: var(--txt1);">{{ student.vname + ' ' + student.nname }}</span>
-            <span style="color: var(--txt3);">Alter: {{student.age}}</span>
+            <span style="color: var(--txt3);">Alter: {{student.age}}: {{student.id}}</span>
           </div>
         </button>
       </li>
