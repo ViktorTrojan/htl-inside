@@ -11,7 +11,7 @@ interface Student {
   vname: string;
   nname: string;
   geschlecht: string;
-  gebdate: string;
+  gebdat: string;
   gewicht: number;
   groesse: number;
   os: string;

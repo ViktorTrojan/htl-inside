@@ -45,7 +45,7 @@
     <div class="px-2 w-full mb-2">
       <div class="flex row gap-3">
         <div class="flex flex-col justify-center rounded-md w-[85%] mt-2" style="background-color: var(--panel1);">
-          <p class="ml-2">Geburts-Datum: {{student.gebdate}}</p>
+          <p class="ml-2">Geburts-Datum: {{student.gebdat}}</p>
           <p class="ml-2 text-xs ">Alter: {{student.age}} Geburtstag in: 365 Tagen</p>
         </div>
         <div class="rounded-xl w-[25%] mt-2 p-1.5 items-center flex-col flex " style="background-color: var(--panel7);">
@@ -99,10 +99,10 @@
       </div>
     </div>
 
-    <div class="flex flex-row py-2 ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel8);">
+    <div class="flex flex-row gap-2 py-2 ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel8);">
       <app-svg-height></app-svg-height>
-      <div class="flex flex-col">
-        <h1 class="text-xl">Körpergröße:</h1>
+      <div class="flex flex-col justify-center" style="color: var(--txt4)">
+        <p class="text-xl">Körpergröße:</p>
         <p class="text-base">{{student.groesse/100}}m</p>
       </div>
     </div>
@@ -177,7 +177,7 @@
         <p class="text-base">Fortgeschrittenes IT-Wissen:</p>
       </div>
       <div class="flex flex-row pb-2 ml-2">
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">{{student.itwissen}}</p>
+        <p class="text-xs rounded-lg mr-1" style=" background-color: var(--ion-background-color);">{{student.itwissen}}</p>
       </div>
     </div>
   </div>
