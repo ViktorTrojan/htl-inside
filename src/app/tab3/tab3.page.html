@@ -25,34 +25,37 @@
   <div *ngFor="let student of students">
     <div class="ml-2 px-2 w-[95%]  rounded-2xl " style="background-color: var(--panel1);">
       <div class="flex justify-center">
-        <img src="assets/Download.png" class="h-[128px] w-[128px] object-contain rounded-full m-2.5">
+        <img src="{{student.foto}}" class="h-[128px] w-[128px] object-contain rounded-full m-2.5">
       </div>
       <div class="flex-col text-center m-2">
-        <p class="text-2xl">{{student.id}}</p>
+        <p class="text-2xl">{{student.vname}} {{student.nname}}</p>
         <p class="text-sm"></p>
       </div>
       <div class="mb-2 ml-2.5 mr-2.5 pb-5">
-        <p class="text-xs ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid expedita repellat quos
-          reprehenderit dolor incidunt, eveniet temporibus est vel dignissimos? Nostrum soluta laborum ducimus!
-          Assumenda,
-          accusantium possimus maxime, illo dolor obcaecati non, expedita in sunt ullam sint nostrum quibusdam iure?</p>
+        <p class="text-xs ">{{student.biografie}}</p>
       </div>
     </div>
 
     <div class="flex items-center flex-row ml-2 px-2 w-[95%] rounded-2xl" style="background-color: var(--panel1);">
-      <img src="assets/Download.png" class=" h-[50px] w-[50px] rounded-full m-2">
-      <p class="text-xs">190191@studierende.htl-donaustadt.at</p>
+      <app-svg-email class="m-2 p-2 rounded-full "
+      style="color: var(--txt1);background-color: var(--svgBg10,);"></app-svg-email>
+      <p class="text-xs">{{student.id}}@studierende.htl-donaustadt.at</p>
     </div>
 
     <div class="px-2 w-full mb-2">
       <div class="flex row gap-3">
         <div class="flex flex-col justify-center rounded-md w-[85%] mt-2" style="background-color: var(--panel1);">
-          <p class="ml-2">Geburts-Datum: 00-00-2000</p>
-          <p class="ml-2 text-xs ">Alter: 18 Geburtstag in: 365 Tagen</p>
+          <p class="ml-2">Geburts-Datum: {{student.gebdate}}</p>
+          <p class="ml-2 text-xs ">Alter: {{student.age}} Geburtstag in: 365 Tagen</p>
         </div>
         <div class="rounded-xl w-[25%] mt-2 p-1.5 items-center flex-col flex " style="background-color: var(--panel7);">
-          <app-svg-gender-male></app-svg-gender-male>
-          <p>Male</p>
+          <div *ngIf="student.geschlecht==='Männlich'; then thenBlock else elseBlock">
+          </div>
+
+          <ng-template #thenBlock>
+            <app-svg-gender-male></app-svg-gender-male></ng-template>
+          <ng-template #elseBlock><app-svg-gender-female></app-svg-gender-female></ng-template>
+          <p>{{student.geschlecht}}</p>
         </div>
       </div>
     </div>
@@ -65,14 +68,14 @@
             <!-- Gewicht -->
             <app-svg-weight></app-svg-weight>
             <p class="text-xs font-bold" style="color: var(--txt4)">Gewicht:</p>
-            <p class="text-xs" style="color: var(--txt4)">120kg</p>
+            <p class="text-xs" style="color: var(--txt4)">{{student.gewicht}}kg</p>
           </div>
           <div class="h-[150px] flex-col flex justify-center items-center rounded-xl"
             style="background-color: var(--panel5);">
             <!-- Schulweg Dauer -->
             <app-svg-run></app-svg-run>
             <p class="text-xs font-bold" style="color: var(--txt4)">Schulweg Dauer:</p>
-            <p class="text-xs" style="color: var(--txt4)">1h 99min</p>
+            <p class="text-xs" style="color: var(--txt4)">{{student.sazeit}}min</p>
           </div>
         </div>
 
@@ -82,7 +85,7 @@
             <!-- Sportlich Aktiv -->
             <app-svg-sport></app-svg-sport>
             <p class="text-xs font-bold" style="color: var(--txt4)">Sportlich Aktiv:</p>
-            <p class="text-xs" style="color: var(--txt4)">8x pro Woche</p>
+            <p class="text-xs" style="color: var(--txt4)">{{student.anzahlsport}}x pro Woche</p>
           </div>
 
           <div class="h-[130px] flex-col flex justify-center items-center rounded-xl"
@@ -90,19 +93,29 @@
             <!-- Social Media Nutzung -->
             <app-svg-social-media></app-svg-social-media>
             <p class="text-xs font-bold" style="color: var(--txt4)">Social Media Nutzung:</p>
-            <p class="text-xs" style="color: var(--txt4)">1h 30min pro Tag</p>
+            <p class="text-xs" style="color: var(--txt4)">{{student.mediennutzung}} Stunden pro Tag</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="flex items-center flex-row ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel1);">
+    <div class="flex flex-row py-2 ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel8);">
+      <app-svg-height></app-svg-height>
+      <div class="flex flex-col">
+        <h1 class="text-xl">Körpergröße:</h1>
+        <p class="text-base">{{student.groesse/100}}m</p>
+      </div>
+    </div>
+
+    <div *ngIf="student.raucher" class="flex items-center flex-row ml-2 px-2 w-[95%] rounded-2xl mb-2"
+      style="background-color: var(--panel1);">
       <app-svg-smoker class="m-2 p-2 rounded-full "
         style="color: var(--txt1);background-color: var(--svgBg1);"></app-svg-smoker>
       <p class="text-base">Raucher</p>
     </div>
 
-    <div class="flex items-center flex-row ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel1);">
+    <div *ngIf="student.alkie " class="flex items-center flex-row ml-2 px-2 w-[95%] rounded-2xl mb-2"
+      style="background-color: var(--panel1);">
       <app-svg-alk class="m-2 p-2 rounded-full px-3"
         style="color: var(--txt1);background-color: var(--svgBg2);"></app-svg-alk>
       <p class="text-base">Trinkt Alkohol</p>
@@ -111,38 +124,37 @@
     <div class="flex items-center flex-row ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel1);">
       <app-svg-code-lang class="m-2 p-2 px-[10px] py-4 rounded-full "
         style="color: var(--txt1);background-color: var(--svgBg3); "></app-svg-code-lang>
-      <p class="text-base">Programmiersprachen: 10</p>
+      <p class="text-base">Programmiersprachen: {{student.anzProg}}</p>
     </div>
 
     <div class="flex items-center flex-row ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel1);">
       <app-svg-lang class="m-2 p-2 px-2 rounded-full "
         style="color: var(--txt1);background-color: var(--svgBg4);"></app-svg-lang>
-      <p class="text-base">Sprachen: 5</p>
+      <p class="text-base">Sprachen: {{student.sprachen}}</p>
     </div>
 
     <div class="flex items-center flex-row ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel1);">
       <app-svg-os class="m-2 px-2 py-[13px] rounded-full "
         style="color: var(--txt1);background-color: var(--svgBg4);"></app-svg-os>
-      <p class="text-base">Betriebssystem: Sus-OS</p>
+      <p class="text-base">Betriebssystem: {{student.os}}</p>
     </div>
 
     <div class="flex items-center flex-row ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel1);">
       <app-svg-books class="m-2 p-2 rounded-full "
         style="color: var(--txt1);background-color: var(--svgBg1);"></app-svg-books>
-      <p class="text-base">Lieblingsfach: SEW</p>
+      <p class="text-base">Lieblingsfach: {{student.lfach}}</p>
     </div>
 
     <div class="flex flex-col ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel1);">
       <div class="flex flex-row items-center">
         <app-svg-special class="m-2 p-2 rounded-full "
           style="color: var(--txt1);background-color: var(--svgBg7);"></app-svg-special>
-        <p class="text-base">Aktueller Berufswunsch: </p>
+        <div class="flex flex-col gap-1">
+          <p class="text-base">Aktueller Berufswunsch:</p>
+          <p class="text-xs"> {{student.bwunsch}} </p>
+        </div>
       </div>
-      <div class="flex flex-row pb-2 ml-2">
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">Klettern</p>
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">Test</p>
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">test32</p>
-      </div>
+
     </div>
 
     <div class="flex flex-col ml-2 px-2 w-[95%] rounded-2xl mb-2" style="background-color: var(--panel1);">
@@ -152,9 +164,9 @@
         <p class="text-base">Hobbies: </p>
       </div>
       <div class="flex flex-row pb-2 ml-2">
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">Klettern</p>
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">Test</p>
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">test32</p>
+        <div *ngFor="let hobby of hobbies">
+          <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">{{hobby.hobby}}</p>
+        </div>
       </div>
     </div>
 
@@ -165,9 +177,7 @@
         <p class="text-base">Fortgeschrittenes IT-Wissen:</p>
       </div>
       <div class="flex flex-row pb-2 ml-2">
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">Programmieren</p>
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">Test</p>
-        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">test32</p>
+        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">{{student.itwissen}}</p>
       </div>
     </div>
   </div>

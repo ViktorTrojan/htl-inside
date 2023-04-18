@@ -16,6 +16,11 @@ class API {
         const res = await this.api_instance.get('/getSchueler?id=' + id);
         return res.data;
     }
+
+    static getHobbies = async (id: any) => {
+        const res = await this.api_instance.get("/getHobbies?id=" + id);
+        return res.data;
+    }
 }
 
 export default API;

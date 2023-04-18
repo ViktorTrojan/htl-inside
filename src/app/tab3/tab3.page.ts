@@ -19,6 +19,7 @@ interface Student {
   raucher: number;
   alkie: number;
   lfach: string;
+  bwunsch: string;
   itwissen: string;
   sazeit: number;
   sprachen: number;
@@ -29,6 +30,10 @@ interface Student {
   age: number;
 }
 
+interface Hobbies {
+  hobby: string;
+}
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -37,11 +42,17 @@ interface Student {
 export class Tab3Page{
   id: number = 0;
   students: Student[] = [];
+  hobbies: Hobbies[] = [];
+
   constructor(private navCtrl: NavController, private tabs: IonTabs, private activatedRoute: ActivatedRoute) {}
 
 
   async getSchueler(id: number){
     return API.getSchueler(id);
+  }
+
+  async getHobbies(id: number){
+    return API.getHobbies(id);
   }
 
   ionViewDidEnter() {
@@ -51,6 +62,9 @@ export class Tab3Page{
     this.getSchueler(this.id).then((data: Student[]) => {
       this.students = data;
     });
+    this.getHobbies(this.id).then((data: Hobbies[]) =>{
+      this.hobbies = data
+    })
     
   }
 

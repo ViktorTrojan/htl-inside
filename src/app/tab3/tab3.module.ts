@@ -24,6 +24,9 @@ import { SvgSpecialModule } from '../svg-special/svg-special.module';
 import { SvgOsModule } from '../svg-os/svg-os.module';
 import { SvgBooksModule } from '../svg-books/svg-books.module';
 import { SvgBrainModule } from '../svg-brain/svg-brain.module';
+import { SvgHeightModule } from '../svg-height/svg-height.module';
+import { SvgEmailComponent } from '../svg-email/svg-email.component';
+import { SvgEmailModule } from '../svg-email/svg-email.module';
 
 @NgModule({
   imports: [
@@ -48,7 +51,9 @@ import { SvgBrainModule } from '../svg-brain/svg-brain.module';
     SvgSpecialModule,
     SvgBooksModule,
     SvgOsModule,
-    SvgBrainModule
+    SvgBrainModule,
+    SvgHeightModule,
+    SvgEmailModule
   ],
   declarations: [Tab3Page]
 })
