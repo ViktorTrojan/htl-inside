@@ -37,9 +37,8 @@ export class Tab2Page implements OnInit {
     this.router.navigate(['/tabs/tab3'], { queryParams: { param1} });
   }
 
-  goToUser(id: any){
-    const param = id;
-    this.router.navigate(['/tabs/tab3'], { queryParams: { param} });
+  goToUser(id: number){
+    this.router.navigate(['/tabs/tab3'], { queryParams: { id } });
   }
 
   goToUeberblick() {
