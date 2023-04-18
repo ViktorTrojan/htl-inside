@@ -7,7 +7,7 @@
   <div class="mt-10"></div>
 
   <!-- Container -->
-  <div class="flex flex-col px-2 sm:px-4 gap-2">
+  <div class="flex flex-col px-2 sm:px-4 pb-2 sm:pb-4 gap-2">
 
     <!-- Settings Bar Container -->
     <div class="flex w-full items-center mb-4">
@@ -30,11 +30,12 @@
       </div>
 
       <!-- App Title -->
-      <p class="text-center text-6xl font-bold">HTL Inside</p>
+      <p class="text-center text-5xl font-bold">HTL Inside</p>
 
       <p class="text-xl">Version: <span>1.0b</span></p>
 
-      <p>"HTL Inside" ist eine Datenbank, die speziell für Schülerinnen und Schüler der 4AHITN entwickelt wurde. Die App
+      <p class="text-sm text-[var(--txt2)]">"HTL Inside" ist eine Datenbank, die speziell für Schülerinnen und Schüler
+        der 4AHITN entwickelt wurde. Die App
         ist der ideale Ort, um wichtige Informationen zu Schülern zu finden.
         Die App bietet eine benutzerfreundliche Oberfläche, die es den Nutzern einfach macht, ihre Profile zu
         begutachten. Das Profil jedes Nutzers ist mit Informationen über seine Interessen, Fähigkeiten und Hobbys
@@ -51,10 +52,14 @@
       <!-- Color Circles Container -->
       <div class="flex justify-evenly">
 
-        <div (click)="changeTheme('dark')" [class.border-4]="selectedTheme === 'dark'" class="bg-slate-800 border rounded-full w-14 h-14"></div>
-        <div (click)="changeTheme('purple')" [class.border-4]="selectedTheme === 'purple'" class="bg-purple-900 border rounded-full w-14 h-14"></div>
-        <div (click)="changeTheme('green')" [class.border-4]="selectedTheme === 'green'" class="bg-green-900 border rounded-full w-14 h-14"></div>
-        <div (click)="changeTheme('blue')" [class.border-4]="selectedTheme === 'blue'" class="bg-blue-900 border rounded-full w-14 h-14"></div>
+        <div (click)="changeTheme('dark')" [class.border-4]="selectedTheme === 'dark'"
+          class="bg-slate-800 border rounded-full w-14 h-14"></div>
+        <div (click)="changeTheme('purple')" [class.border-4]="selectedTheme === 'purple'"
+          class="bg-purple-900 border rounded-full w-14 h-14"></div>
+        <div (click)="changeTheme('green')" [class.border-4]="selectedTheme === 'green'"
+          class="bg-green-900 border rounded-full w-14 h-14"></div>
+        <div (click)="changeTheme('blue')" [class.border-4]="selectedTheme === 'blue'"
+          class="bg-blue-900 border rounded-full w-14 h-14"></div>
 
       </div>
 
