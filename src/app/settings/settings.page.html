@@ -51,10 +51,10 @@
       <!-- Color Circles Container -->
       <div class="flex justify-evenly">
 
-        <div class="bg-slate-800 border-4 rounded-full w-14 h-14"></div>
-        <div class="bg-purple-900 border rounded-full w-14 h-14"></div>
-        <div class="bg-green-900 border rounded-full w-14 h-14"></div>
-        <div class="bg-blue-900 border rounded-full w-14 h-14"></div>
+        <div (click)="changeTheme('dark')" [class.border-4]="selectedTheme === 'dark'" class="bg-slate-800 border rounded-full w-14 h-14"></div>
+        <div (click)="changeTheme('purple')" [class.border-4]="selectedTheme === 'purple'" class="bg-purple-900 border rounded-full w-14 h-14"></div>
+        <div (click)="changeTheme('green')" [class.border-4]="selectedTheme === 'green'" class="bg-green-900 border rounded-full w-14 h-14"></div>
+        <div (click)="changeTheme('blue')" [class.border-4]="selectedTheme === 'blue'" class="bg-blue-900 border rounded-full w-14 h-14"></div>
 
       </div>
 

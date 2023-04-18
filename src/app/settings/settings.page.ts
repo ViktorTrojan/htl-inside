@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { IonTabs } from '@ionic/angular';
 
 @Component({
@@ -8,13 +8,20 @@ import { IonTabs } from '@ionic/angular';
 })
 export class SettingsPage implements OnInit {
 
-  constructor(private tabs: IonTabs) { }
+  selectedTheme = 'dark';
+
+  constructor(private tabs: IonTabs, private renderer: Renderer2) { }
 
   ngOnInit() {
   }
 
   goToLandingPage() {
     this.tabs.select("tab2");
+  }
+
+  changeTheme(theme: string) {
+    this.selectedTheme = theme;
+    this.renderer.setAttribute(document.body, 'color-theme', theme);
   }
 
 }

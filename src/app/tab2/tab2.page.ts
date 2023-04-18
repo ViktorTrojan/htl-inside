@@ -45,5 +45,9 @@ export class Tab2Page implements OnInit {
   goToUeberblick() {
     this.tabs.select("ueberblick");
   }
+
+  goToSettings() {
+    this.tabs.select("settings");
+  }
 }
 

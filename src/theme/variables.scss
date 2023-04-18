@@ -1,9 +1,8 @@
 @import 'tailwindcss/base';
-
 @import 'tailwindcss/components';
-
 @import 'tailwindcss/utilities';
 
+// TODO: make the fonts work
 @font-face {
   font-family: 'Poppins';
   src: url('https://fonts.googleapis.com/css?family=Poppins') format('woff2');
@@ -109,7 +108,7 @@ html {
    * -------------------------------------------
    */
 
-  body {
+  body[color-theme="dark"] {
     --btn-1: #EECBFF;
     --btn-1-1: #BA72C0;
     --btn-2: #D2EEC4;
@@ -141,7 +140,7 @@ html {
     --svgBg7: #98B5FF;
     --svgBg8: #fd79a8;
     --svgBg9: #38173A;
-    
+
 
     --poly1: #FFFFFF;
     --poly2: #CCCCCC;
@@ -150,67 +149,107 @@ html {
 
     --ion-color-primary: rgb(134, 114, 216);
     --ion-color-primary-shadow: '0 0 10px 5px rgba(134, 114, 216, 1)';
-    --ion-color-primary-rgb: 66,140,255;
+    --ion-color-primary-rgb: 66, 140, 255;
     --ion-color-primary-contrast: #ffffff;
-    --ion-color-primary-contrast-rgb: 255,255,255;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
     --ion-color-primary-shade: #3a7be0;
     --ion-color-primary-tint: #5598ff;
 
     --ion-color-secondary: #50c8ff;
-    --ion-color-secondary-rgb: 80,200,255;
+    --ion-color-secondary-rgb: 80, 200, 255;
     --ion-color-secondary-contrast: #ffffff;
-    --ion-color-secondary-contrast-rgb: 255,255,255;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
     --ion-color-secondary-shade: #46b0e0;
     --ion-color-secondary-tint: #62ceff;
 
     --ion-color-tertiary: #6a64ff;
-    --ion-color-tertiary-rgb: 106,100,255;
+    --ion-color-tertiary-rgb: 106, 100, 255;
     --ion-color-tertiary-contrast: #ffffff;
-    --ion-color-tertiary-contrast-rgb: 255,255,255;
+    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
     --ion-color-tertiary-shade: #5d58e0;
     --ion-color-tertiary-tint: #7974ff;
 
     --ion-color-success: #2fdf75;
-    --ion-color-success-rgb: 47,223,117;
+    --ion-color-success-rgb: 47, 223, 117;
     --ion-color-success-contrast: #000000;
-    --ion-color-success-contrast-rgb: 0,0,0;
+    --ion-color-success-contrast-rgb: 0, 0, 0;
     --ion-color-success-shade: #29c467;
     --ion-color-success-tint: #44e283;
 
     --ion-color-warning: #ffd534;
-    --ion-color-warning-rgb: 255,213,52;
+    --ion-color-warning-rgb: 255, 213, 52;
     --ion-color-warning-contrast: #000000;
-    --ion-color-warning-contrast-rgb: 0,0,0;
+    --ion-color-warning-contrast-rgb: 0, 0, 0;
     --ion-color-warning-shade: #e0bb2e;
     --ion-color-warning-tint: #ffd948;
 
     --ion-color-danger: #ff4961;
-    --ion-color-danger-rgb: 255,73,97;
+    --ion-color-danger-rgb: 255, 73, 97;
     --ion-color-danger-contrast: #ffffff;
-    --ion-color-danger-contrast-rgb: 255,255,255;
+    --ion-color-danger-contrast-rgb: 255, 255, 255;
     --ion-color-danger-shade: #e04055;
     --ion-color-danger-tint: #ff5b71;
 
     --ion-color-dark: #f4f5f8;
-    --ion-color-dark-rgb: 244,245,248;
+    --ion-color-dark-rgb: 244, 245, 248;
     --ion-color-dark-contrast: #000000;
-    --ion-color-dark-contrast-rgb: 0,0,0;
+    --ion-color-dark-contrast-rgb: 0, 0, 0;
     --ion-color-dark-shade: #d7d8da;
     --ion-color-dark-tint: #f5f6f9;
 
     --ion-color-medium: #989aa2;
-    --ion-color-medium-rgb: 152,154,162;
+    --ion-color-medium-rgb: 152, 154, 162;
     --ion-color-medium-contrast: #000000;
-    --ion-color-medium-contrast-rgb: 0,0,0;
+    --ion-color-medium-contrast-rgb: 0, 0, 0;
     --ion-color-medium-shade: #86888f;
     --ion-color-medium-tint: #a2a4ab;
 
     --ion-color-light: #222428;
-    --ion-color-light-rgb: 34,36,40;
+    --ion-color-light-rgb: 34, 36, 40;
     --ion-color-light-contrast: #ffffff;
-    --ion-color-light-contrast-rgb: 255,255,255;
+    --ion-color-light-contrast-rgb: 255, 255, 255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+  }
+
+  body[color-theme="blue"] {
+    --btn-1: #71d8be;
+    --btn-1-1: #72c09c;
+    --btn-2: #558ab4;
+    --btn-2-1: #596794;
+    --btn-text: black;
+    --panel0: #0F0F15;
+    --panel1: #333237;
+    --panel2: #1E1C22;
+
+    --panel3: #deebf1;
+    --panel4: #dfe7f1;
+    --panel5: #f3f7ff;
+    --panel6: #f3feff;
+    --panel7: #c0d0de;
+
+    --txt1: #FFFFFF;
+    --txt2: #dddddd;
+    --txt3: #CCCCCC;
+    --txt4: #000000;
+    --txt5: #333237;
+    --txtCol1: #2fb96d;
+
+    --svgBg1: #FFADAE;
+    --svgBg2: #91FFFD;
+    --svgBg3: #EDC9AA;
+    --svgBg4: #C3EDAA;
+    --svgBg5: #FFCFFA;
+    --svgBg6: #FFE898;
+    --svgBg7: #98B5FF;
+    --svgBg8: #fd79a8;
+    --svgBg9: #38173A;
+
+
+    --poly1: #FFFFFF;
+    --poly2: #CCCCCC;
+    --poly3: #777777;
+    --poly4: #444444;
   }
 
   /*
@@ -220,10 +259,10 @@ html {
 
   .ios body {
     --ion-background-color: #1D1C21;
-    --ion-background-color-rgb: 0,0,0;
+    --ion-background-color-rgb: 0, 0, 0;
 
     --ion-text-color: #ffffff;
-    --ion-text-color-rgb: 255,255,255;
+    --ion-text-color-rgb: 255, 255, 255;
 
     --ion-color-step-50: #0d0d0d;
     --ion-color-step-100: #1a1a1a;
@@ -264,10 +303,10 @@ html {
 
   .md body {
     --ion-background-color: #1D1C21;
-    --ion-background-color-rgb: 18,18,18;
+    --ion-background-color-rgb: 18, 18, 18;
 
     --ion-text-color: #ffffff;
-    --ion-text-color-rgb: 255,255,255;
+    --ion-text-color-rgb: 255, 255, 255;
 
     --ion-border-color: #222222;
 
