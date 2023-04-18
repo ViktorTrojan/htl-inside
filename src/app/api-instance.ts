@@ -13,7 +13,7 @@ class API {
 
 
     static getSchueler = async (id: any) => {
-        const res = await this.api_instance.get('/getSchueler');
+        const res = await this.api_instance.get('/getSchueler?id=' + id);
         return res.data;
     }
 }

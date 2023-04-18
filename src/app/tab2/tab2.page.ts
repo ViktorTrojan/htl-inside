@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import axios, { AxiosRequestConfig } from "axios";
 import { NavController, IonTabs } from '@ionic/angular';
 import API from '../api-instance';
-import { NavigationExtras, Router } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 interface Student {
+  id: number;
   vname: string;
   nname: string;
   age: number;
@@ -24,14 +26,20 @@ export class Tab2Page implements OnInit {
     });
   }  
 
-  constructor(private navCtrl: NavController, private tabs: IonTabs) {}
+  constructor(private navCtrl: NavController, private tabs: IonTabs, private router: Router) {}
 
   async getAllSchueler(){
     return API.getAllSchuelers();
   }
 
   goToTab3() {
-    this.tabs.select("tab3");
+    const param1 = '190181';
+    this.router.navigate(['/tabs/tab3'], { queryParams: { param1} });
+  }
+
+  goToUser(id: any){
+    const param = id;
+    this.router.navigate(['/tabs/tab3'], { queryParams: { param} });
   }
 
   goToUeberblick() {

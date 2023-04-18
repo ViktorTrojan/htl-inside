@@ -53,7 +53,8 @@
     <!-- Students -->
     <ul>
       <li *ngFor="let student of students">
-        <button class="ion-activatable flex items-center gap-2 mb-2 p-2 rounded-md w-full relative overflow-hidden" style="background-color: var(--panel1); color: var(--btn-1);">
+        <button class="ion-activatable flex items-center gap-2 mb-2 p-2 rounded-md w-full relative overflow-hidden" style="background-color: var(--panel1); color: var(--btn-1);" 
+        (click)="goToUser(123)">
           <ion-ripple-effect></ion-ripple-effect>
           <img src="assets/Download.png" class="w-12 h-12 object-contain rounded-3xl">
 
