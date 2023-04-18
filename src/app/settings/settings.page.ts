@@ -7,8 +7,7 @@ import { IonTabs } from '@ionic/angular';
   styleUrls: ['./settings.page.scss'],
 })
 export class SettingsPage implements OnInit {
-
-  selectedTheme = 'dark';
+  selectedTheme = localStorage.getItem("selectedTheme") || 'dark'; // set the default theme to 'dark' or load from localstorage
 
   constructor(private tabs: IonTabs, private renderer: Renderer2) { }
 
@@ -21,6 +20,7 @@ export class SettingsPage implements OnInit {
 
   changeTheme(theme: string) {
     this.selectedTheme = theme;
+    localStorage.setItem("selectedTheme", theme); // save the selected theme in localStorage
     this.renderer.setAttribute(document.body, 'color-theme', theme);
   }
 
