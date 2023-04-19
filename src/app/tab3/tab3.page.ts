@@ -28,6 +28,7 @@ interface Student {
   biografie: string;
   foto: string;
   age: number;
+  daysTillNextBirthday: number;
 }
 
 interface Hobbies {

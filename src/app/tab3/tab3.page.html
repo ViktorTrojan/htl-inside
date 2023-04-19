@@ -46,14 +46,12 @@
       <div class="flex row gap-3">
         <div class="flex flex-col justify-center rounded-md w-[85%] mt-2" style="background-color: var(--panel1);">
           <p class="ml-2">Geburts-Datum: {{student.gebdat}}</p>
-          <p class="ml-2 text-xs ">Alter: {{student.age}} Geburtstag in: 365 Tagen</p>
+          <p class="ml-2 text-xs ">Alter: {{student.age}} Geburtstag in: {{student.daysTillNextBirthday}} Tagen</p>
         </div>
-        <div class="rounded-xl w-[25%] mt-2 p-1.5 items-center flex-col flex " style="background-color: var(--panel7);">
+        <div class="rounded-xl w-[25%] mt-2 p-4 items-center flex-col flex " style="background-color: var(--panel7);">
           <div *ngIf="student.geschlecht==='Männlich'; then thenBlock else elseBlock">
           </div>
-
-          <ng-template #thenBlock>
-            <app-svg-gender-male></app-svg-gender-male></ng-template>
+          <ng-template #thenBlock><app-svg-gender-male></app-svg-gender-male></ng-template>
           <ng-template #elseBlock><app-svg-gender-female></app-svg-gender-female></ng-template>
           <p>{{student.geschlecht}}</p>
         </div>
