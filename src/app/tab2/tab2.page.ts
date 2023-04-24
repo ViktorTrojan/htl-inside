@@ -20,6 +20,7 @@ interface Student {
 })
 export class Tab2Page implements OnInit {
   students: Student[] = [];
+  searchVal: string = "";
   
   ngOnInit() {
     this.getAllSchueler().then((data: Student[]) => {
@@ -29,13 +30,18 @@ export class Tab2Page implements OnInit {
 
   constructor(private navCtrl: NavController, private tabs: IonTabs, private router: Router) {}
 
+ 
+
   async getAllSchueler(){
     return API.getAllSchuelers();
   }
 
   goToTab3() {
-    const param1 = '190181';
-    this.router.navigate(['/tabs/tab3'], { queryParams: { param1} });
+    var randomUser = Math.floor(Math.random() * (this.students.length - 1 + 1) + 1);
+    console.log(randomUser)
+    const id = this.students[randomUser].id;
+    console.log(id)
+    this.router.navigate(['/tabs/tab3'], { queryParams: { id } });
   }
 
   goToUser(id: number){
@@ -48,6 +54,10 @@ export class Tab2Page implements OnInit {
 
   goToSettings() {
     this.tabs.select("settings");
+  }
+
+  searchInput(val: string){
+    this.searchVal = val;
   }
 }
 

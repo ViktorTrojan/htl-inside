@@ -45,9 +45,9 @@
     <div class="flex gap-1 mt-4">
       <!-- Input TODO: user ionic search -->
       <input class="w-full border-none rounded" style="background-color: var(--panel0);" type="text" name="search"
-        id="search" placeholder="Search...">
+        id="search" placeholder="Search..." #search>
       <!-- Search Icon -->
-      <button class="p-1 rounded-md" style="background-color: var(--panel0);">
+      <button class="p-1 rounded-md" style="background-color: var(--panel0);" (click)="searchInput(search.value)">
         <ion-icon class="text-4xl" style="color: var(--txt1);" name="search-outline"></ion-icon>
       </button>
     </div>
@@ -55,21 +55,41 @@
     <!-- Students -->
     <ul>
       <li *ngFor="let student of students">
-        <button class="ion-activatable flex items-center gap-2 mb-2 p-2 rounded-md w-full relative overflow-hidden"
-          style="background-color: var(--panel1); color: var(--btn-1);" (click)="goToUser(student.id)">
-          <ion-ripple-effect></ion-ripple-effect>
-          
-          <!-- Circle -->
-          <div style="background-color: var(--panel2);" class="w-16 h-16 rounded-full overflow-hidden">
-            <img [src]="student.foto" class="object-contain">
-          </div>
+        <div *ngIf="student.vname === searchVal || student.nname === searchVal || searchVal === ''; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <button class="ion-activatable flex items-center gap-2 mb-2 p-2 rounded-md w-full relative overflow-hidden"
+            style="background-color: var(--panel1); color: var(--btn-1);" (click)="goToUser(student.id)">
+            <ion-ripple-effect></ion-ripple-effect>
+            
+            <!-- Circle -->
+            <div style="background-color: var(--panel2);" class="w-16 h-16 rounded-full overflow-hidden">
+              <img [src]="student.foto" class="object-contain">
+            </div>
 
-          <!-- Name and Age -->
-          <div class="flex flex-col items-start">
-            <span class="text-xl" style="color: var(--txt1);">{{ student.vname + ' ' + student.nname }}</span>
-            <span style="color: var(--txt3);">Alter: {{student.age}}</span>
-          </div>
-        </button>
+            <!-- Name and Age -->
+            <div class="flex flex-col items-start">
+              <span class="text-xl" style="color: var(--txt1);">{{ student.vname + ' ' + student.nname }}</span>
+              <span style="color: var(--txt3);">Alter: {{student.age}}</span>
+            </div>
+          </button>
+        </ng-template>
+        <ng-template #elseBlock>
+          <button class="ion-activatable flex items-center gap-2 mb-2 p-2 rounded-md w-full relative overflow-hidden"
+            style="background-color: var(--panel1); color: var(--btn-1);">
+            <ion-ripple-effect></ion-ripple-effect>
+            
+            <!-- Circle -->
+            <div style="background-color: var(--panel2);" class="w-16 h-16 rounded-full overflow-hidden">
+              <img  class="object-contain">
+            </div>
+
+            <!-- Name and Age -->
+            <div class="flex flex-col items-start">
+              <span class="text-xl" style="color: var(--txt1);">Schüler nicht gefunden</span>
+              <span style="color: var(--txt3);">Bitte suche nach dem vollständigen Vor oder Nachnamen</span>
+            </div>
+          </button>
+        </ng-template>
       </li>
     </ul>
 
