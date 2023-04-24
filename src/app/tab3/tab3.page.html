@@ -16,7 +16,7 @@
 
       <h1>Schüler</h1>
 
-      <button class="p-1 rounded-md" style="background-color: var(--panel0);">
+      <button class="p-1 rounded-md" style="background-color: var(--panel0);" (click)="goToSettings()">
         <app-svg-settings style="color: var(--txt1);"></app-svg-settings>
       </button>
     </div>
@@ -175,7 +175,7 @@
         <p class="text-base">Fortgeschrittenes IT-Wissen:</p>
       </div>
       <div class="flex flex-row pb-2 ml-2">
-        <p class="text-xs rounded-lg mr-1" style=" background-color: var(--ion-background-color);">{{student.itwissen}}</p>
+        <p class="text-xs p-1 rounded-lg mr-1" style=" background-color: var(--ion-background-color);">{{student.itwissen}}</p>
       </div>
     </div>
   </div>

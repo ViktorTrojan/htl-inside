@@ -72,4 +72,8 @@ export class Tab3Page{
   goToTab2(){
     this.tabs.select("tab2")
   }
+
+  goToSettings() {
+    this.tabs.select("settings");
+  }
 }
