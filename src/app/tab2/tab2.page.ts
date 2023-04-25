@@ -21,6 +21,7 @@ interface Student {
 export class Tab2Page implements OnInit {
   students: Student[] = [];
   searchVal: string = "";
+
   
   ngOnInit() {
     this.getAllSchueler().then((data: Student[]) => {
@@ -30,10 +31,26 @@ export class Tab2Page implements OnInit {
 
   constructor(private navCtrl: NavController, private tabs: IonTabs, private router: Router) {}
 
- 
-
   async getAllSchueler(){
     return API.getAllSchuelers();
+  }
+
+  isValid(name: string){
+    if(name === ""){
+      return true;
+    }else{
+      const schueler = this.students.find((student) => student.vname == name || student.nname == name || student.vname + " " + student.nname == name);
+      if(schueler === undefined){
+        return false;
+      }else{
+        return true;
+      }
+    }
+    
+  }
+  getSearchedSchueler(name: string){
+    const schueler = this.students.filter((student) => student.vname == name || student.nname == name || student.vname + " " + student.nname == name);
+    return schueler;
   }
 
   goToTab3() {
