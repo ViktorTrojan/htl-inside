@@ -21,6 +21,16 @@ class API {
         const res = await this.api_instance.get("/getHobbies?id=" + id);
         return res.data;
     }
+
+    static getMaleCount = async() => {
+        const res = await this.api_instance.get("/getmalecount");
+        return res.data;
+    }
+
+    static getFemaleCount = async() => {
+        const res = await this.api_instance.get("/getfemalecount");
+        return res.data;
+    }
 }
 
 export default API;

@@ -73,13 +73,13 @@
       </div>
 
       <div class="flex justify-between">
-        <p class="text-xl">19 Jungs</p>
-        <p class="text-xl">4 Mädchen</p>
+        <p class="text-xl">{{maleCount}} Jungs</p>
+        <p class="text-xl">{{femaleCount}} Mädchen</p>
       </div>
 
       <div class="flex gap-1">
-        <div class="w-[70%] h-2 rounded-full bg-blue-500"></div>
-        <div class="w-[30%] h-2 rounded-full bg-red-500"></div>
+        <div [style.width.%]="maleWidth" class="h-2 rounded-full bg-blue-500"></div>
+        <div [style.width.%]="femaleWidth" class="h-2 rounded-full bg-red-500"></div>
       </div>
 
     </div>
