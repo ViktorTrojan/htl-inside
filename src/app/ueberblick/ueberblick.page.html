@@ -34,9 +34,9 @@
       </div>
       <app-svg-polygonoutline class="absolute scale-[90%] rotate-[20deg]"
         style="color: var(--poly1);"></app-svg-polygonoutline>
-      <app-svg-polygonoutline class="absolute scale-[130%] rotate-[40deg]"
+        <app-svg-polygonoutline class="absolute scale-[110%] rotate-[30deg]"
         style="color: var(--poly2);"></app-svg-polygonoutline>
-      <app-svg-polygonoutline class="absolute scale-[110%] rotate-[30deg]"
+      <app-svg-polygonoutline class="absolute scale-[130%] rotate-[40deg]"
         style="color: var(--poly3);"></app-svg-polygonoutline>
       <app-svg-polygonoutline class="absolute scale-[150%] rotate-[50deg]"
         style="color: var(--poly4);"></app-svg-polygonoutline>
@@ -73,13 +73,13 @@
       </div>
 
       <div class="flex justify-between">
-        <p class="text-xl">19 Jungs</p>
-        <p class="text-xl">4 Mädchen</p>
+        <p class="text-xl">{{maleCount}} Jungs</p>
+        <p class="text-xl">{{femaleCount}} Mädchen</p>
       </div>
 
       <div class="flex gap-1">
-        <div class="w-[70%] h-2 rounded-full bg-blue-500"></div>
-        <div class="w-[30%] h-2 rounded-full bg-red-500"></div>
+        <div [style.width.%]="maleWidth" class="h-2 rounded-full" style="background-color: var(--svgBg10)"></div>
+        <div [style.width.%]="femaleWidth" class="h-2 rounded-full" style="background-color: var(--svgBg8)"></div>
       </div>
 
     </div>
