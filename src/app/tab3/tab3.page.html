@@ -47,7 +47,7 @@
 
       <div class="w-full mb-2">
         <div class="flex row gap-3">
-          <div class="flex flex-col justify-center rounded-md w-full mt-2 pl-1" style="background-color: var(--panel1);">
+          <div class="flex flex-col justify-center rounded-md w-full mt-2 pl-1.5 gap-1.5" style="background-color: var(--panel1);">
             <p class="text-xs">Geburts-Datum: {{student.gebdat}}</p>
             <p class="text-xs ">Alter: {{student.age}} Geburtstag in: {{student.daysTillNextBirthday}} Tagen</p>
           </div>
@@ -138,7 +138,7 @@
 
       <div class="flex items-center flex-row rounded-2xl mb-2"
         style="background-color: var(--panel1);">
-        <app-svg-os class="m-2 py-[13px] rounded-full "
+        <app-svg-os class="m-2 p-2 py-[13px] rounded-full "
           style="color: var(--txt1);background-color: var(--svgBg4);"></app-svg-os>
         <p class="text-base">Betriebssystem: {{student.os}}</p>
       </div>
