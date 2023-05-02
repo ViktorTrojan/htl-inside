@@ -30,11 +30,11 @@
       <div class="absolute w-[140px] h-[140px]">
         <!-- TODO: Make Polygon Image -->
         <!-- <img class="w-[140px] h-[140px] rounded-full" src="https://hies.lueger.cloud/avatar_schi.jpg"> -->
-        <img class="w-[140px] h-[140px] rounded-full" src="https://api.susnext.com/schi.jpg">
+        <img class="w-[140px] h-[140px] rounded-full" src="{{teacher[0].foto}}">
       </div>
       <app-svg-polygonoutline class="absolute scale-[90%] rotate-[20deg]"
         style="color: var(--poly1);"></app-svg-polygonoutline>
-        <app-svg-polygonoutline class="absolute scale-[110%] rotate-[30deg]"
+      <app-svg-polygonoutline class="absolute scale-[110%] rotate-[30deg]"
         style="color: var(--poly2);"></app-svg-polygonoutline>
       <app-svg-polygonoutline class="absolute scale-[130%] rotate-[40deg]"
         style="color: var(--poly3);"></app-svg-polygonoutline>
@@ -50,7 +50,7 @@
             <p class="text-xs">Klassenvorstand</p>
           </div>
           <div style="background-color: var(--panel1);" class="w-max rounded-full px-2 py-1">
-            <p>Veronika Schippani</p>
+            <p>{{teacher[0].vname}} {{teacher[0].nname}}</p>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
         <div class="flex justify-center items-center w-14 h-14 rounded-full bg-[#cccccc]">
           <app-svg-class class="" style="color: var(--poly4);"></app-svg-class>
         </div>
-        <p class="text-lg">4AHITN(N303)/23 Schüler</p>
+        <p class="text-lg">{{classInfo[0].name}}({{classInfo[0].room}}) {{classInfo[0].countStudent}} Pupils</p>
       </div>
 
       <div class="flex justify-between">
@@ -93,7 +93,7 @@
         <div class="flex items-center gap-2">
           <!-- TODO: do a component for this colored svg circle -->
           <div class="flex justify-center items-center w-14 h-14 rounded-full bg-[#FFE898]">
-            <app-svg-study class="text-[#3F3A1F]" ></app-svg-study>
+            <app-svg-study class="text-[#3F3A1F]"></app-svg-study>
           </div>
           <p class="text-lg">Schulfächer</p>
         </div>

@@ -31,6 +31,16 @@ class API {
         const res = await this.api_instance.get("/getfemalecount");
         return res.data;
     }
+
+    static getTeacher = async() => {
+        const res = await this.api_instance.get("/getTeacher");
+        return res.data;
+    }
+
+    static getClassInfo = async() => {
+        const res = await this.api_instance.get("/getClassInfo");
+        return res.data;
+    }
 }
 
 export default API;
