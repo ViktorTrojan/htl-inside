@@ -45,7 +45,7 @@
     <div class="flex gap-1 mt-4">
       <!-- Input TODO: user ionic search -->
       <input class="w-full border-none rounded" style="background-color: var(--panel0);" type="text" name="search"
-        id="search" placeholder="Search..." #search>
+        id="search" placeholder="Search..." (keyup.enter)="searchInput(search.value)" #search>
       <!-- Search Icon -->
       <button class="p-1 rounded-md" style="background-color: var(--panel0);" (click)="searchInput(search.value)">
         <ion-icon class="text-4xl" style="color: var(--txt1);" name="search-outline"></ion-icon>
