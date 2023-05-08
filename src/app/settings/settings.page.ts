@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { IonTabs } from '@ionic/angular';
+import { IonTabs, Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-settings',
@@ -9,7 +9,9 @@ import { IonTabs } from '@ionic/angular';
 export class SettingsPage implements OnInit {
   selectedTheme = localStorage.getItem("selectedTheme") || 'dark'; // set the default theme to 'dark' or load from localstorage
 
-  constructor(private tabs: IonTabs, private renderer: Renderer2) { }
+  constructor(private platform: Platform, private tabs: IonTabs, private renderer: Renderer2) {
+    this.backButtonEvent();
+   }
 
   ngOnInit() {
   }
@@ -24,4 +26,9 @@ export class SettingsPage implements OnInit {
     this.renderer.setAttribute(document.body, 'color-theme', theme);
   }
 
+  backButtonEvent() {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.tabs.select("tab2");
+    });
+  }
 }

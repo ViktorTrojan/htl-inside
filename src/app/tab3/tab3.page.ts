@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NavController, IonTabs } from '@ionic/angular';
+import { NavController, IonTabs, Platform } from '@ionic/angular';
 import API from '../api-instance';
 import { NavParams } from '@ionic/angular'; 
 
@@ -45,7 +45,9 @@ export class Tab3Page{
   students: Student[] = [];
   hobbies: Hobbies[] = [];
 
-  constructor(private navCtrl: NavController, private tabs: IonTabs, private activatedRoute: ActivatedRoute) {}
+  constructor( private platform: Platform, private navCtrl: NavController, private tabs: IonTabs, private activatedRoute: ActivatedRoute) {
+    this.backButtonEvent();
+  }
 
 
   async getSchueler(id: number){
@@ -71,6 +73,12 @@ export class Tab3Page{
 
   goToTab2(){
     this.tabs.select("tab2")
+  }
+
+  backButtonEvent() {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.tabs.select("tab2");
+    });
   }
 
   goToSettings() {

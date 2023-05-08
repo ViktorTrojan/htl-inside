@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IonTabs } from '@ionic/angular';
+import { IonTabs, Platform} from '@ionic/angular';
 import API from '../api-instance';
 
 @Component({
@@ -10,7 +10,9 @@ import API from '../api-instance';
 
 export class UeberblickPage implements OnInit {
 
-  constructor(private tabs: IonTabs) { }
+  constructor(private platform: Platform, private tabs: IonTabs) { 
+    this.backButtonEvent();
+  }
 
   teacher: any;
   classInfo: any;
@@ -47,6 +49,12 @@ export class UeberblickPage implements OnInit {
 
   goToSettings() {
     this.tabs.select("settings");
+  }
+
+  backButtonEvent() {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.tabs.select("tab2");
+    });
   }
 
 }
