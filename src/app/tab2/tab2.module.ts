@@ -5,11 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
-import { SvgQuestionComponent } from '../svg-question/svg-question.component';
-import { SvgInfoComponent } from '../svg-info/svg-info.component';
+import { SvgQuestionModule } from '../svg-question/svg-question.module';
+import { SvgInfoModule } from '../svg-info/svg-info.module';
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 import { SvgSettingsModule } from '../svg-settings/svg-settings.module';
+
 
 @NgModule({
   imports: [
@@ -18,8 +19,10 @@ import { SvgSettingsModule } from '../svg-settings/svg-settings.module';
     FormsModule,
     ExploreContainerComponentModule,
     Tab2PageRoutingModule,
-    SvgSettingsModule
+    SvgSettingsModule,
+    SvgQuestionModule,
+    SvgInfoModule,
   ],
-  declarations: [Tab2Page, SvgQuestionComponent, SvgInfoComponent]
+  declarations: [Tab2Page]
 })
 export class Tab2PageModule {}

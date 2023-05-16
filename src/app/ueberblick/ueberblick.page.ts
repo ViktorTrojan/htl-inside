@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IonTabs, Platform} from '@ionic/angular';
+import { IonTabs, Platform} from '@ionic/angular'; 
+import { Router } from '@angular/router';
 import API from '../api-instance';
 
 @Component({
@@ -10,7 +11,7 @@ import API from '../api-instance';
 
 export class UeberblickPage implements OnInit {
 
-  constructor(private platform: Platform, private tabs: IonTabs) { 
+  constructor(private platform: Platform, private tabs: IonTabs, private router: Router) { 
     this.backButtonEvent();
   }
 
@@ -22,7 +23,7 @@ export class UeberblickPage implements OnInit {
 
   maleWidth: any;
   femaleWidth: any;
-
+  
   ngOnInit() {
     API.getMaleCount().then((maleData) => {
       API.getFemaleCount().then((femaleData) => {
@@ -43,8 +44,8 @@ export class UeberblickPage implements OnInit {
     });
   }
 
-  goToLandingPage() {
-    this.tabs.select("tab2");
+  goToTab2() {
+    this.router.navigate(['/tabs/tab1']);
   }
 
   goToSettings() {
@@ -53,7 +54,7 @@ export class UeberblickPage implements OnInit {
 
   backButtonEvent() {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.tabs.select("tab2");
+      this.tabs.select("tab1");
     });
   }
 

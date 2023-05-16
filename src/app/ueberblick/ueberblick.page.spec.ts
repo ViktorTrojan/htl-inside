@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
+import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+
 import { UeberblickPage } from './ueberblick.page';
 
 describe('UeberblickPage', () => {
@@ -10,7 +12,7 @@ describe('UeberblickPage', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ UeberblickPage ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), ExploreContainerComponentModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(UeberblickPage);
