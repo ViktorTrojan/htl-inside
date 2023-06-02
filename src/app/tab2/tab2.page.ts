@@ -4,7 +4,6 @@ import { NavController, IonTabs } from '@ionic/angular';
 import API from '../api-instance';
 import { Router } from '@angular/router';
 
-
 interface Student {
   id: number;
   vname: string;
@@ -19,9 +18,12 @@ interface Student {
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page implements OnInit {
+
   students: Student[] = [];
   searchVal: string = "";
 
+  ionViewDidEnter() {
+  }
   
   ngOnInit() {
     this.getAllSchueler().then((data: Student[]) => {
@@ -76,5 +78,6 @@ export class Tab2Page implements OnInit {
   searchInput(val: string){
     this.searchVal = val;
   }
-}
 
+
+}
