@@ -1,7 +1,0 @@
-{
-  "name": "htl-inside",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
